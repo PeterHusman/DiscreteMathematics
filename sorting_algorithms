@@ -1,0 +1,9 @@
+def bubble_sort(input_list, rule=lambda x, y: x <= y):
+	while True:		
+        sorts = False		
+        for i in range(len(input_list) - 1):		
+            if not rule(input_list[i], input_list[i + 1]):
+                input_list[i], input_list[i + 1] = input_list[i + 1], input_list[i]		
+                sorts = True		
+        if not sorts:		
+            return input_list        
